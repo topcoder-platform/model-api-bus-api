@@ -1,0 +1,44 @@
+swagger: '2.0'
+info:
+  version: V1
+  title: Topcoder BUS API Template API
+  description: > 
+  license:
+    name: MIT
+    url: 'http://github.com/gruntjs/grunt/blob/master/LICENSE-MIT'
+host: localhost
+basePath: /
+schemes:
+  - http
+produces:
+  - application/json
+consumes:
+  - application/json
+  
+paths:
+  '/entities':
+    post:
+      tags:
+        - Entity
+      summary: Create a new Entity
+      description: Create a new Entity
+      parameters:
+        -
+          in: body
+          name: body
+          required: true
+          schema:
+            $ref: '#/definitions/Entity'
+      responses:
+        201:
+          description: OK
+          schema:
+            $ref: '#/definitions/Entity'
+    
+definitions:
+  Entity:
+    properties:
+      name:
+        type: string
+      description:
+        type: string
