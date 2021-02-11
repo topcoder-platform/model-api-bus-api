@@ -1,0 +1,9 @@
+version: '3'
+services:
+  model-api-bus-api:
+    image: model-api-bus-api:latest
+    build:
+      context: ../
+      dockerfile: docker/Dockerfile
+    env_file:
+      - api.env

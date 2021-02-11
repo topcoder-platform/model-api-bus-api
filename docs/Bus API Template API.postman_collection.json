@@ -1,0 +1,35 @@
+{
+	"info": {
+		"_postman_id": "10742977-8f83-4d25-add5-1bbd63e44769",
+		"name": "Bus API Template API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create a sample entity",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Test\",\n    \"description\": \"test\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/v5/model-api/bus-api/entities",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"entities"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
